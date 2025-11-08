@@ -265,9 +265,11 @@ addMessage('system', `${error.message}`);    }
                 </div>
               )}
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+     <img src={img.url} alt="Generated" className="w-full rounded-lg" />
+
+  href={img.url}
+  download
+  className="absolute top-2 right-2 p-2 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
+>
+  <Download size={14} style={{ color: '#4a3728' }} />
+</a>
