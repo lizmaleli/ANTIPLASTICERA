@@ -96,8 +96,7 @@ export default function AntiplasticEraStudio() {
       }
     } catch (error) {
       console.error('Generation error:', error);
-      addMessage('system', `❌ Error: ${error.message}. Check your API key and billing.`);
-    } finally {
+addMessage('system', `Error: ${error.message}. Check your API key and billing.`);    } finally {
       setIsGenerating(false);
     }
   };
@@ -124,8 +123,7 @@ export default function AntiplasticEraStudio() {
       const reply = data.text;
       addMessage('assistant', reply);
     } catch (error) {
-      addMessage('system', `❌ ${error.message}`);
-    }
+addMessage('system', `${error.message}`);    }
   };
 
   const handleSuggestionClick = (suggestion) => {
