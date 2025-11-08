@@ -81,12 +81,10 @@ export default function AntiplasticEraStudio() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt, aspect_ratio: '1:1', size: '2K' })
       });
-
       if (!response.ok) {
         const error = await response.json();
         throw new Error(error.error || 'API request failed');
       }
-
       const { imageUrl } = await response.json();
       if (imageUrl) {
         setGeneratedImages(prev => [...prev, { url: imageUrl, prompt }]);
@@ -119,7 +117,6 @@ export default function AntiplasticEraStudio() {
           ]
         })
       });
-
       const data = await response.json();
       if (data.error) throw new Error(data.error);
       const reply = data.text;
@@ -244,7 +241,7 @@ export default function AntiplasticEraStudio() {
                     onClick={handleSend}
                     disabled={!input.trim()}
                     className="px-5 py-3 rounded-xl transition-all disabled:opacity-50"
-                    style={{ background: '#4a3728', color: '#f5f1ed' }}
+                    style {{ background: '#4a3728', color: '#f5f1ed' }}
                   >
                     <Send size={18} />
                   </button>
