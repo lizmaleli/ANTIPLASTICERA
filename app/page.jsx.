@@ -241,7 +241,7 @@ export default function AntiplasticEraStudio() {
                     onClick={handleSend}
                     disabled={!input.trim()}
                     className="px-5 py-3 rounded-xl transition-all disabled:opacity-50"
-                    style {{ background: '#4a3728', color: '#f5f1ed' }}
+                    style={{ background: '#4a3728', color: '#f5f1ed' }}
                   >
                     <Send size={18} />
                   </button>
